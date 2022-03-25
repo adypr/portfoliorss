@@ -1,0 +1,64 @@
+body.white-theme {
+  background-color: var(--primary);
+}
+
+.toggle__check:checked + .toggle__line.white-theme::before,
+.toggle__check:checked + .toggle__line.white-theme::after {
+  background-color: var(--contrast);
+}
+
+.toggle__check:checked:hover + .toggle__line,
+.toggle__check:checked:hover + .toggle__line.white-theme::before,
+.toggle__check:checked:hover + .toggle__line.white-theme::after {
+  background-color: var(--secondary);
+}
+
+.toggle-nav.white-theme {
+  background-color: var(--primary);
+}
+
+.toggle-nav.white-theme .link {
+  color: var(--contrast);
+}
+
+.toggle-nav.white-theme .link:hover {
+  color: var(--secondary);
+}
+
+.button__transparent.white-theme::before {
+  color: var(--contrast);
+}
+
+.button__transparent:hover.white-theme {
+  background-color: var(--secondary);
+}
+
+.button__transparent.white-theme span {
+  color: var(--contrast);
+}
+
+.button__transparent.white-theme:hover span {
+  color: var(--primary);
+}
+
+.section__title.white-theme {
+  color: var(--contrast);
+
+  background-color: var(--primary);
+}
+
+.skills.white-theme,
+.price.white-theme {
+  color: var(--contrast);
+}
+
+.skills.white-theme::before,
+.portfolio.white-theme::before,
+.video.white-theme::before,
+.price.white-theme::before {
+  background-color: var(--contrast);
+}
+
+.footer.white-theme .container {
+  background-color: var(--contrast);
+}

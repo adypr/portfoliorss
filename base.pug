@@ -1,0 +1,54 @@
+//- Variables
+- var mainMenuItems = ['skills', 'portfolio', 'video', 'price', 'contacts'];
+- var buttonTextHero = ['H', 'i', 'r', 'e', ' ', 'm', 'e'];
+
+- var buttonTextWinter = ['W', 'i', 'n', 't', 'e', 'r'];
+- var buttonTextSpring = ['S', 'p', 'r', 'i', 'n', 'g'];
+- var buttonTextSummer = ['S', 'u', 'm', 'm', 'e', 'r'];
+- var buttonTextAutumn = ['A', 'u', 't', 'u', 'm', 'n'];
+
+- var buttonTextPrice = ['Or', 'der', ' ', 'sh', 'oo', 'ti', 'ng'];
+
+- var buttonTextForm = ['Se', 'nd', ' ', 'me', 'ss', 'ag', 'e'];
+
+-
+ var skills = [['Digital photography', 'High-quality photos in the studio and on the nature'],
+                ['Video shooting', 'Capture your moments so that they always stay with you'],
+                ['Retouch', 'I strive to make photography surpass reality'],
+                ['Audio', 'Professional sounds recording for video, advertising, portfolio']];
+
+-
+ var images = ['assets/img/autumn/1.jpg', 'assets/img/autumn/2.jpg', 'assets/img/autumn/3.jpg', 'assets/img/autumn/4.jpg', 'assets/img/autumn/5.jpg', 'assets/img/autumn/6.jpg'];
+
+//- Mixins
+
+mixin nav(items)
+    nav.nav
+        ul.nav-list 
+            each item in items
+                li.nav-item 
+                    a.nav-link.link(href="#"+item, data-i18n=item)=item
+
+mixin toggleNav(items)
+    ul.toggle-nav__list 
+        each item in items
+            li.toggle-nav__item 
+                a.toggle-nav__link.link(href="#"+item, data-i18n=item)=item
+
+
+mixin buttonAnimatedText(text, dataLang)
+    each letter,i in text
+        span.button__text(data-i18n=dataLang + "-span-" + (i+1))=letter
+
+mixin skillsItems(items)
+    each item,i in items 
+        .skill 
+            h4.skill__name(data-i18n="skill-title-"+(i+1))=item[0]
+            p.skill__description(data-i18n="skill-text-"+(i+1))=item[1]
+
+mixin works(imgWorks)
+    each img in imgWorks 
+        .portfolio__work 
+            img.portfolio__image(src=img alt="My work")
+
+

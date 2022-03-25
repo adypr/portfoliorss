@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/media.css">
+	<link rel="stylesheet" href="styles/white-theme.css">
+	<title>Portfolio</title>
+</head>
+
+<body>
+	<div class="dark"></div>
+	<nav class="toggle-nav">
+		<ul class="toggle-nav__list">
+			<li class="toggle-nav__item"> <a class="toggle-nav__link link" href="#skills" data-i18n="skills">skills</a></li>
+			<li class="toggle-nav__item"> <a class="toggle-nav__link link" href="#portfolio" data-i18n="portfolio">portfolio</a></li>
+			<li class="toggle-nav__item"> <a class="toggle-nav__link link" href="#video" data-i18n="video">video</a></li>
+			<li class="toggle-nav__item"> <a class="toggle-nav__link link" href="#price" data-i18n="price">price</a></li>
+			<li class="toggle-nav__item"> <a class="toggle-nav__link link" href="#contacts" data-i18n="contacts">contacts</a></li>
+		</ul>
+	</nav>
+	<header class="header">
+		<div class="container">
+			<div class="header__container">
+				<a class="logo link" href="#">
+					<svg width="70" height="50">
+						<use xlink:href="assets/svg/logo.svg#logo"></use>
+					</svg>
+				</a>
+				<nav class="nav">
+					<ul class="nav-list">
+						<li class="nav-item"> <a class="nav-link link" href="#skills" data-i18n="skills">skills</a></li>
+						<li class="nav-item"> <a class="nav-link link" href="#portfolio" data-i18n="portfolio">portfolio</a></li>
+						<li class="nav-item"> <a class="nav-link link" href="#video" data-i18n="video">video</a></li>
+						<li class="nav-item"> <a class="nav-link link" href="#price" data-i18n="price">price</a></li>
+						<li class="nav-item"> <a class="nav-link link" href="#contacts" data-i18n="contacts">contacts</a></li>
+					</ul>
+				</nav>
+				<div class="langs"><a class="langs__en link active" href="#" data-lang="en">en</a><span> / </span><a class="langs__ru link" href="#" data-lang="ru">ru</a></div>
+				<button class="theme__toggle">
+					<svg class="theme__icon" width="45" height="45">
+						<use class="sun" xlink:href="assets/svg/theme.svg#sun"></use>
+					</svg>
+				</button>
+				<div class="toggle">
+					<input class="toggle__check" type="checkbox">
+					<div class="toggle__line"></div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container">
+			<section class="section hero" id="hero">
+				<h1 class="hero__title" data-i18n="hero-title">Alexa Rise</h1>
+				<p class="hero__text" data-i18n="hero-text">Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise</p>
+				<button class="button button__colored" data-text="Hire me" data-i18n="hire"><span class="button__text" data-i18n="hire-span-1">H</span><span class="button__text" data-i18n="hire-span-2">i</span><span class="button__text" data-i18n="hire-span-3">r</span><span class="button__text" data-i18n="hire-span-4">e</span><span class="button__text" data-i18n="hire-span-5"> </span><span class="button__text" data-i18n="hire-span-6">m</span><span class="button__text" data-i18n="hire-span-7">e</span></button>
+			</section>
+			<section class="section skills" id="skills">
+				<h2 class="section__title" data-i18n="skills">Skills</h2>
+				<div class="skills__items">
+					<div class="skill">
+						<h4 class="skill__name" data-i18n="skill-title-1">Digital photography</h4>
+						<p class="skill__description" data-i18n="skill-text-1">High-quality photos in the studio and on the nature</p>
+					</div>
+					<div class="skill">
+						<h4 class="skill__name" data-i18n="skill-title-2">Video shooting</h4>
+						<p class="skill__description" data-i18n="skill-text-2">Capture your moments so that they always stay with you</p>
+					</div>
+					<div class="skill">
+						<h4 class="skill__name" data-i18n="skill-title-3">Retouch</h4>
+						<p class="skill__description" data-i18n="skill-text-3">I strive to make photography surpass reality</p>
+					</div>
+					<div class="skill">
+						<h4 class="skill__name" data-i18n="skill-title-4">Audio</h4>
+						<p class="skill__description" data-i18n="skill-text-4">Professional sounds recording for video, advertising, portfolio</p>
+					</div>
+				</div>
+			</section>
+			<section class="section portfolio" id="portfolio">
+				<h2 class="section__title" data-i18n="portfolio">Portfolio</h2>
+				<div class="portfolio__buttons">
+					<button class="button button__transparent" data-text="Winter" data-season="winter" data-i18n="winter"><span class="button__text" data-i18n="winter-span-1">W</span><span class="button__text" data-i18n="winter-span-2">i</span><span class="button__text" data-i18n="winter-span-3">n</span><span class="button__text" data-i18n="winter-span-4">t</span><span class="button__text" data-i18n="winter-span-5">e</span><span class="button__text" data-i18n="winter-span-6">r</span></button>
+					<button class="button button__transparent" data-text="Spring" data-season="spring" data-i18n="spring"><span class="button__text" data-i18n="spring-span-1">S</span><span class="button__text" data-i18n="spring-span-2">p</span><span class="button__text" data-i18n="spring-span-3">r</span><span class="button__text" data-i18n="spring-span-4">i</span><span class="button__text" data-i18n="spring-span-5">n</span><span class="button__text" data-i18n="spring-span-6">g</span></button>
+					<button class="button button__transparent" data-text="Summer" data-season="summer" data-i18n="summer"><span class="button__text" data-i18n="summer-span-1">S</span><span class="button__text" data-i18n="summer-span-2">u</span><span class="button__text" data-i18n="summer-span-3">m</span><span class="button__text" data-i18n="summer-span-4">m</span><span class="button__text" data-i18n="summer-span-5">e</span><span class="button__text" data-i18n="summer-span-6">r</span></button>
+					<button class="button button__transparent button__transparent_active" data-text="Autumn" data-season="autumn" data-i18n="autumn"><span class="button__text" data-i18n="autumn-span-1">A</span><span class="button__text" data-i18n="autumn-span-2">u</span><span class="button__text" data-i18n="autumn-span-3">t</span><span class="button__text" data-i18n="autumn-span-4">u</span><span class="button__text" data-i18n="autumn-span-5">m</span><span class="button__text" data-i18n="autumn-span-6">n</span></button>
+				</div>
+				<div class="portfolio__works">
+					<div class="portfolio__work"> <img class="portfolio__image" src="assets/img/autumn/1.jpg" alt="My work"></div>
+					<div class="portfolio__work"> <img class="portfolio__image" src="assets/img/autumn/2.jpg" alt="My work"></div>
+					<div class="portfolio__work"> <img class="portfolio__image" src="assets/img/autumn/3.jpg" alt="My work"></div>
+					<div class="portfolio__work"> <img class="portfolio__image" src="assets/img/autumn/4.jpg" alt="My work"></div>
+					<div class="portfolio__work"> <img class="portfolio__image" src="assets/img/autumn/5.jpg" alt="My work"></div>
+					<div class="portfolio__work"> <img class="portfolio__image" src="assets/img/autumn/6.jpg" alt="My work"></div>
+				</div>
+			</section>
+			<section class="section video" id="video">
+				<h2 class="section__title" data-i18n="video">Video</h2>
+				<div class="video__player">
+					<video class="video__frame" poster="assets/img/video-player.jpg" src="assets/video/video.mp4"></video>
+					<div class="video__buttons">
+						<button class="video__skip" data-skip="-10"></button>
+						<button class="video__button"></button>
+						<button class="video__skip" data-skip="10"> </button>
+						<p class="control-description" data-i18n="control-desription">Please control the video playback using keyboard: Spacebar, Right Arrow and Left Arrow</p>
+					</div>
+					<div class="video__controls">
+						<input class="video__progress" type="range" value="0" min="0" max="100" step="1">
+						<div class="video__toggles">
+							<div class="video__toggle video__toggle-play"></div>
+							<div class="video__time"> <span class="video__current-time">0:00 </span><span>/</span><span class="video__duration-time">0:00</span></div>
+							<div class="video__toggle video__toggle-volume"></div>
+							<input class="video__volume-range" type="range" name="volume" value="0.4" min="0" max="1" step="0.1">
+							<div class="video__speed-text">x1.0</div>
+							<input class="video__speed-range" type="range" name="playbackRate" value="1" min="0.25" max="2" step="0.05">
+							<div class="video__toggle video__reset-speed" title="Reset speed"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section price" id="price">
+				<h2 class="section__title" data-i18n="price">Price</h2>
+				<div class="price__plans">
+					<div class="price__plan">
+						<h3 class="price__name" data-i18n="price-standart">Standard</h3>
+						<p class="price__sum">500 $</p>
+						<p class="price__description"> <span data-i18n="price-description-1-span-1">One location</span><span data-i18n="price-description-1-span-2">120 photos in color</span><span data-i18n="price-description-1-span-3">12 photos in retouch</span><span data-i18n="price-description-1-span-4">Readiness 2-3 weeks</span><span data-i18n="price-description-1-span-5">Make up, visage</span></p>
+						<button class="button button__colored" data-text="Order shooting" data-i18n="order"><span class="button__text" data-i18n="order-span-1">Or</span><span class="button__text" data-i18n="order-span-2">der</span><span class="button__text" data-i18n="order-span-3"> </span><span class="button__text" data-i18n="order-span-4">sh</span><span class="button__text" data-i18n="order-span-5">oo</span><span class="button__text" data-i18n="order-span-6">ti</span><span class="button__text" data-i18n="order-span-7">ng</span></button>
+					</div>
+					<div class="price__plan">
+						<h3 class="price__name" data-i18n="price-premium">Premium</h3>
+						<p class="price__sum">700 $</p>
+						<p class="price__description"> <span data-i18n="price-description-2-span-1">One or two locations</span><span data-i18n="price-description-2-span-2">200 photos in color</span><span data-i18n="price-description-2-span-3">20 photos in retouch</span><span data-i18n="price-description-2-span-4">Readiness 1-2 weeks</span><span data-i18n="price-description-2-span-5">Make up, visage</span></p>
+						<button class="button button__colored" data-text="Order shooting" data-i18n="order"><span class="button__text" data-i18n="order-span-1">Or</span><span class="button__text" data-i18n="order-span-2">der</span><span class="button__text" data-i18n="order-span-3"> </span><span class="button__text" data-i18n="order-span-4">sh</span><span class="button__text" data-i18n="order-span-5">oo</span><span class="button__text" data-i18n="order-span-6">ti</span><span class="button__text" data-i18n="order-span-7">ng</span></button>
+					</div>
+					<div class="price__plan">
+						<h3 class="price__name" data-i18n="price-gold">Gold</h3>
+						<p class="price__sum">1000 $</p>
+						<p class="price__description"> <span data-i18n="price-description-3-span-1">Three locations or more</span><span data-i18n="price-description-3-span-2">300 photos in color</span><span data-i18n="price-description-3-span-3">50 photos in retouch</span><span data-i18n="price-description-3-span-4">Readiness 1 week</span><span data-i18n="price-description-3-span-5">Make up, visage, hairstyle</span></p>
+						<button class="button button__colored" data-text="Order shooting" data-i18n="order"><span class="button__text" data-i18n="order-span-1">Or</span><span class="button__text" data-i18n="order-span-2">der</span><span class="button__text" data-i18n="order-span-3"> </span><span class="button__text" data-i18n="order-span-4">sh</span><span class="button__text" data-i18n="order-span-5">oo</span><span class="button__text" data-i18n="order-span-6">ti</span><span class="button__text" data-i18n="order-span-7">ng</span></button>
+					</div>
+				</div>
+			</section>
+			<section class="section contacts" id="contacts">
+				<h2 data-i18n="contacts">Contacts </h2>
+				<form class="form">
+					<h3 class="form__title" data-i18n="contact-me">Contact me</h3>
+					<input class="form__field" type="email" placeholder="E-mail">
+					<input class="form__field" type="tel" placeholder="Phone" data-i18n="phone">
+					<textarea class="form__message form__field" id="message" placeholder="Message" data-i18n="message"></textarea>
+					<button class="button button__colored" data-text="Send message" data-i18n="send-message"><span class="button__text" data-i18n="send-span-1">Se</span><span class="button__text" data-i18n="send-span-2">nd</span><span class="button__text" data-i18n="send-span-3"> </span><span class="button__text" data-i18n="send-span-4">me</span><span class="button__text" data-i18n="send-span-5">ss</span><span class="button__text" data-i18n="send-span-6">ag</span><span class="button__text" data-i18n="send-span-7">e</span></button>
+				</form>
+			</section>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__container">
+				<p class="copyright"><span>© </span><span>2022 </span><span><a class="link" href="https://github.com/adypr">github</a></span></p>
+				<p class="school"> <a class="link" href="https://rs.school/js-stage0/">Rolling Scopes School</a></p>
+				<ul class="social">
+					<li class="social__item">
+						<a class="link social__link" href="#">
+							<svg width="32" height="32">
+								<use xlink:href="assets/svg/social.svg#inst"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="link social__link" href="#">
+							<svg width="32" height="32">
+								<use xlink:href="assets/svg/social.svg#fb"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="link social__link" href="#">
+							<svg width="32" height="32">
+								<use xlink:href="assets/svg/social.svg#tw"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="link social__link" href="#">
+							<svg width="32" height="32">
+								<use xlink:href="assets/svg/social.svg#pin"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script src="js/index.js" type="module"></script>
+	<script src="js/theme-toggle.js" type="module"></script>
+	<script src="js/video.js" type="module"></script>
+</body>
+
+</html>

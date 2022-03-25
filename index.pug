@@ -1,0 +1,161 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="icon" href="assets/favicon.ico" type="image/x-icon")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css", integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==", crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="styles/style.css")
+    link(rel="stylesheet", href="styles/media.css")
+    link(rel="stylesheet", href="styles/white-theme.css")
+    
+    title Portfolio
+  body
+    
+    include base
+    .dark
+    nav.toggle-nav
+      +toggleNav(mainMenuItems)
+    header.header
+      .container
+        .header__container
+          a.logo.link(href="#")
+            svg(width="70" height="50")
+              use(xlink:href="assets/svg/logo.svg#logo")
+          +nav(mainMenuItems)
+          .langs
+            a.langs__en.link.active(href="#", data-lang="en") en
+            span  / 
+            a.langs__ru.link(href="#", data-lang="ru") ru
+          button.theme__toggle 
+            svg.theme__icon(width="45" height="45")
+              use.sun(xlink:href="assets/svg/theme.svg#sun")
+          .toggle
+            input.toggle__check(type="checkbox")
+            .toggle__line
+    main.main
+      .container 
+        section.section.hero#hero
+          h1.hero__title(data-i18n="hero-title") Alexa Rise
+          p.hero__text(data-i18n="hero-text")
+            | Save sincere emotions, romantic feelings and happy moments of life
+            | together with professional photographer Alexa Rise
+          button.button.button__colored(data-text="Hire me", data-i18n="hire")
+            +buttonAnimatedText(buttonTextHero, "hire")
+        section.section.skills#skills
+          h2.section__title(data-i18n="skills") Skills
+          .skills__items
+            +skillsItems(skills)
+        section.section.portfolio#portfolio
+          h2.section__title(data-i18n="portfolio") Portfolio
+          .portfolio__buttons 
+            button.button.button__transparent(data-text="Winter", data-season="winter" data-i18n="winter")
+              +buttonAnimatedText(buttonTextWinter, "winter")
+            button.button.button__transparent(data-text="Spring", data-season="spring" data-i18n="spring")
+              +buttonAnimatedText(buttonTextSpring, "spring")
+            button.button.button__transparent(data-text="Summer", data-season="summer" data-i18n="summer")
+              +buttonAnimatedText(buttonTextSummer, "summer")
+            button.button.button__transparent.button__transparent_active(data-text="Autumn", data-season="autumn" data-i18n="autumn")
+              +buttonAnimatedText(buttonTextAutumn, "autumn")
+          .portfolio__works
+            +works(images)
+        section.section.video#video
+          h2.section__title(data-i18n="video") Video
+          .video__player
+            video.video__frame(poster="assets/img/video-player.jpg", src="assets/video/video.mp4")
+            .video__buttons
+              button.video__skip(data-skip="-10")
+              button.video__button
+              button.video__skip(data-skip="10") 
+              p.control-description(data-i18n="control-desription") Please control the video playback using keyboard: Spacebar, Right Arrow and Left Arrow
+            .video__controls 
+              input.video__progress(type="range", value="0", min="0", max="100", step="1")
+              .video__toggles 
+                .video__toggle.video__toggle-play
+                .video__time 
+                  span.video__current-time 0:00 
+                  span /
+                  span.video__duration-time 0:00
+                .video__toggle.video__toggle-volume
+                input.video__volume-range(type="range", name="volume", value="0.4", min="0", max="1", step="0.1")
+                .video__speed-text x1.0
+                input.video__speed-range(type="range", name="playbackRate", value="1", min="0.25", max="2", step="0.05")
+                .video__toggle.video__reset-speed(title="Reset speed")
+        section.section.price#price
+          h2.section__title(data-i18n="price") Price
+          .price__plans
+            .price__plan 
+              h3.price__name(data-i18n="price-standart") Standard
+              p.price__sum 500 $
+              p.price__description 
+                span(data-i18n="price-description-1-span-1") One location
+                span(data-i18n="price-description-1-span-2") 120 photos in color
+                span(data-i18n="price-description-1-span-3") 12 photos in retouch
+                span(data-i18n="price-description-1-span-4") Readiness 2-3 weeks
+                span(data-i18n="price-description-1-span-5") Make up, visage
+              button.button.button__colored(data-text="Order shooting", data-i18n="order")
+                +buttonAnimatedText(buttonTextPrice, "order")
+            .price__plan 
+              h3.price__name(data-i18n="price-premium") Premium
+              p.price__sum 700 $
+              p.price__description 
+                span(data-i18n="price-description-2-span-1") One or two locations
+                span(data-i18n="price-description-2-span-2") 200 photos in color
+                span(data-i18n="price-description-2-span-3") 20 photos in retouch
+                span(data-i18n="price-description-2-span-4") Readiness 1-2 weeks
+                span(data-i18n="price-description-2-span-5") Make up, visage
+              button.button.button__colored(data-text="Order shooting", data-i18n="order")
+                +buttonAnimatedText(buttonTextPrice, "order")
+            .price__plan 
+              h3.price__name(data-i18n="price-gold") Gold
+              p.price__sum 1000 $
+              p.price__description 
+                span(data-i18n="price-description-3-span-1") Three locations or more
+                span(data-i18n="price-description-3-span-2") 300 photos in color
+                span(data-i18n="price-description-3-span-3") 50 photos in retouch
+                span(data-i18n="price-description-3-span-4") Readiness 1 week
+                span(data-i18n="price-description-3-span-5") Make up, visage, hairstyle
+              button.button.button__colored(data-text="Order shooting", data-i18n="order")
+                +buttonAnimatedText(buttonTextPrice, "order")
+        section.section.contacts#contacts
+          h2(data-i18n="contacts") Contacts 
+          form.form
+            h3.form__title(data-i18n="contact-me") Contact me
+            input.form__field(type="email", placeholder="E-mail")
+            input.form__field(type="tel", placeholder="Phone", data-i18n="phone")
+            textarea.form__message.form__field#message(placeholder="Message", data-i18n="message")
+            button.button.button__colored(data-text="Send message",  data-i18n="send-message")
+              +buttonAnimatedText(buttonTextForm, "send")
+    footer.footer
+      .container
+        .footer__container 
+          p.copyright
+            span © 
+            span 2022 
+            span
+              a.link(href="https://github.com/adypr") github
+          p.school 
+            a.link(href="https://rs.school/js-stage0/") Rolling Scopes School
+          ul.social 
+            li.social__item 
+              a.link.social__link(href="#")
+                svg(width="32" height="32")
+                  use(xlink:href="assets/svg/social.svg#inst")
+            li.social__item 
+              a.link.social__link(href="#")
+                svg(width="32" height="32")
+                  use(xlink:href="assets/svg/social.svg#fb")
+            li.social__item 
+              a.link.social__link(href="#")
+                svg(width="32" height="32")
+                  use(xlink:href="assets/svg/social.svg#tw")
+            li.social__item 
+              a.link.social__link(href="#")
+                svg(width="32" height="32")
+                  use(xlink:href="assets/svg/social.svg#pin")
+  
+    script(src="js/index.js" type="module")
+    script(src="js/theme-toggle.js" type="module")
+    script(src="js/video.js" type="module")
+    
+    
